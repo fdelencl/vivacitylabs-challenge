@@ -56,6 +56,7 @@ const scoreTable = [
 
 // returns the word's score according to the above score table
 function scoreOfWord(word) {
+	// map the word's letters: find the matching tables and return the coresponding scores
 	let score = [...word].map(char => scoreTable.find(st => st.letters.includes(char)).score)
 	return score.reduce((a, b) => a + b)
 }
