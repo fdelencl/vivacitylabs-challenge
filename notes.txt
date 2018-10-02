@@ -1,0 +1,27 @@
+- install dependencies:
+npm install
+-run:
+node ./hash.js ./input/hash-1.txt
+node ./path.js ./input/path-basic.txt
+node ./scrabble.js ./input/board-given.txt
+
+about the hash problem:
+I find my solution quite slow. this problem calls for multiprocessing or eventually gpu acceleration.
+Javascript doesn't really excel at those problems. Or maybe I'm wrong.
+The 3rd file will time out.
+I took it to more than 2 billion, it took way too long and the solution was still not found.
+
+about the path problem:
+Since the objective was to use a library I used pathfinding.js.
+it appeared quite easy to use.
+For the algorythm I used Dijkstra as it is reliable in finding the quickest path and the easiest to implement.
+On the other hand, it is not the fastest.
+
+about the scrabble problem:
+This one was way harder.
+I first tried to implement an algorythm where I would have filtered words from the dict.
+It was a terrible idea and I ended up scraping what I had done.
+On the second try I decided to bruteforce the problem.
+It ended up working fairly well as the only difficulty was to write a function that would detect illegal moves exhaustively
+I tried to filter the dict as much as I could and then tried to put every word on each box of each line and column.
+On my computer, it found the solution in around 2 seconds.
